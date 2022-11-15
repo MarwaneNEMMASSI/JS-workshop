@@ -1,0 +1,132 @@
+<!Doctype html>
+	<html>
+		
+		<head>
+			<title>Titre de l'exercice</title>
+			<meta charset= utf-8>
+			<link rel="stylesheet" href="datevalide.css">
+			
+
+		</head>
+
+		<body>
+
+
+			<nav>
+    <ul>
+        <li><a  href="permuterdeuxnombres.html">Les variables</a></li>
+        <li><a href="datevalide.html">Les conditions</a></li>
+        <li class="menu"><a href="#">Les boucles </a>
+          <ul class="sous-menu">
+            <li><a href="tabledemultiplication.html">La boucle for</a></li>
+            <li><a href="devinerunnombre.html">La boucle while</a></li>
+            <li><a href="losangeenetoiles.html">Les boucles imbriquées </a></li>
+
+          </ul>
+        </li>
+        <li><a href="Calculatrice.html">Les fonctions</a></li>
+        <li class="menu"><a href="#">Les chaines </a>
+          <ul class="sous-menu">
+            <li><a href="rechercheetsuppressiondansunechaine.html">Recherche et Supression </a></li>
+            <li><a href="nombredevoyelles.html">Compter le nombre des voyelles </a></li>
+            
+          </ul>
+        </li>
+        <li class="menu"><a href="#">Les tableaux </a>
+            <ul class="sous-menu">
+              <li><a href="tritableau.html">Tri d'un tableau</a></li>
+              <li><a href="recherchedansuntableau.html">Recherche d'un tableau</a></li>
+              
+            </ul>
+          </li>
+        
+        
+      </ul>
+    </nav>
+
+    <h1>Valider une date</h1>
+      <div id="Enonce">
+        <div id="TitreEnonce">Enoncé</div>
+        <div id="ParagrapheEnonce"><p>Ecrire un script qui permet de saisir les trois champs d'une date (jour, mois et année) et d'indiquer si la date est correcte ou non</p></div>
+      </div>
+<div id="Demo">
+        <div id="TitreDemo">Demo</div>
+        <div id="CorpsDemo">
+          <input id="Day" type="text" placeholder="Entrez un jour"></input>
+        <input id="Month" type="text" placeholder="Entrez un mois"></input>
+        <input id="Year" type="text" placeholder="Entrez une année"></input>
+        <button class="BouttonDateValide" onclick="DateValide()">Validez</button>
+        <div id="resultat"></div>
+        </div>
+      </div>
+
+      <div id="CodeSource">
+        <div id="TitreCodeSource">Code source</div>
+        <div id="CorpsCodeSource"><p><textarea readonly rows="29" cols="120">function DateValide()
+  {
+    let Day = document.getElementById("Day").value
+    let Month = document.getElementById("Month").value
+    let Year = document.getElementById("Year").value
+        
+  if ( isNaN(Year) || isNaN(Month) || isNaN(Day) ) {
+    document.getElementById("resultat").innerHTML += "La date est incorrecte"
+
+    } else if ( ( (Year % 4 == 0)  &&  (Year % 100 != 0) ) && ( Month == 2) && ( Day <= 29 && Day > 0)) {
+    document.getElementById("resultat").innerHTML += "La date est correcte"
+
+    } else if ( (Year % 4 == 0) && (Year % 100 == 0) && (Year % 400 == 0) && ( Month == 2) && ( Day <= 29 && Day > 0)) {
+    document.getElementById("resultat").innerHTML += "La date est incorrecte"
+
+    } else if ( (Year % 4 != 0) && ( Month == 2 || Month == 02 ) && ( Day <= 28 && Day > 0) ) {
+    document.getElementById("resultat").innerHTML += "La date est correcte"
+      }
+    else if ( (Month == 12 || Month == 10 || Month == 8 || Month == 7 || Month == 5 || Month == 3 || Month == 1) && ( Day <= 31 && Day > 0)) {
+    document.getElementById("resultat").innerHTML += "La date est correcte" 
+      }
+    else if ( (Month == 11 || Month == 9 || Month == 6 || Month == 4) && ( Day <= 30 && Day > 0))
+      {
+    document.getElementById("resultat").innerHTML += "La date est correcte"
+      }
+      else
+        {
+        document.getElementById("resultat").innerHTML += "La date est incorrecte"
+        }
+  } </textarea></p></div>  
+      </div>
+
+      <script>
+
+function DateValide()
+  {
+    let Day = document.getElementById("Day").value
+    let Month = document.getElementById("Month").value
+    let Year = document.getElementById("Year").value
+        
+  if ( isNaN(Year) || isNaN(Month) || isNaN(Day) ) {
+    document.getElementById("resultat").innerHTML += "La date est incorrecte"
+
+    } else if ( ( (Year % 4 == 0)  &&  (Year % 100 != 0) ) && ( Month == 2) && ( Day <= 29 && Day > 0)) {
+    document.getElementById("resultat").innerHTML += "La date est correcte"
+
+    } else if ( (Year % 4 == 0) && (Year % 100 == 0) && (Year % 400 == 0) && ( Month == 2) && ( Day <= 29 && Day > 0)) {
+    document.getElementById("resultat").innerHTML += "La date est incorrecte"
+
+    } else if ( (Year % 4 != 0) && ( Month == 2 || Month == 02 ) && ( Day <= 28 && Day > 0) ) {
+    document.getElementById("resultat").innerHTML += "La date est correcte"
+      }
+    else if ( (Month == 12 || Month == 10 || Month == 8 || Month == 7 || Month == 5 || Month == 3 || Month == 1) && ( Day <= 31 && Day > 0)) {
+    document.getElementById("resultat").innerHTML += "La date est correcte" 
+      }
+    else if ( (Month == 11 || Month == 9 || Month == 6 || Month == 4) && ( Day <= 30 && Day > 0))
+      {
+    document.getElementById("resultat").innerHTML += "La date est correcte"
+      }
+      else
+        {
+        document.getElementById("resultat").innerHTML += "La date est incorrecte"
+        }
+  } 
+
+
+      </script>
+    </body>

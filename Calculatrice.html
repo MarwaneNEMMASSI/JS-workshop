@@ -1,0 +1,141 @@
+<!Doctype html>
+	<html>
+		
+		<head>
+			<title>Titre de l'exercice</title>
+			<meta charset= utf-8>
+			<link rel="stylesheet" href="Calculatrice.css">
+      <script src="https://kit.fontawesome.com/d78c31e99a.js" crossorigin="anonymous"></script>
+			
+
+		</head>
+
+		<body>
+
+
+			<nav>
+    <ul>
+        <li><a  href="permuterdeuxnombres.html">Les variables</a></li>
+        <li><a href="datevalide.html">Les conditions</a></li>
+        <li class="menu"><a href="#">Les boucles </a>
+          <ul class="sous-menu">
+            <li><a href="tabledemultiplication.html">La boucle for</a></li>
+            <li><a href="devinerunnombre.html">La boucle while</a></li>
+            <li><a href="losangeenetoiles.html">Les boucles imbriquées </a></li>
+
+          </ul>
+        </li>
+        <li><a href="Calculatrice.html">Les fonctions</a></li>
+        <li class="menu"><a href="#">Les chaines </a>
+          <ul class="sous-menu">
+            <li><a href="rechercheetsuppressiondansunechaine.html">Recherche et Supression </a></li>
+            <li><a href="nombredevoyelles.html">Compter le nombre des voyelles </a></li>
+            
+          </ul>
+        </li>
+        <li class="menu"><a href="#">Les tableaux </a>
+            <ul class="sous-menu">
+              <li><a href="tritableau.html">Tri d'un tableau</a></li>
+              <li><a href="recherchedansuntableau.html">Recherche d'un tableau</a></li>
+              
+            </ul>
+          </li>
+        
+        
+      </ul>
+    </nav>
+
+    <h1>Calculatrice</h1>
+      <div id="Enonce">
+        <div id="TitreEnonce">Enoncé</div>
+        <div id="ParagrapheEnonce"><p>Créez 4 fonctions javascript (somme, soustraction, division, multiplication). L'utilisateur saisi deux nombres dans deux inputs, choisi ensuite une opération arithmétique. Le résultat est donné par l'une des 4 fonctions Javascript</p></div>
+      </div>
+
+<div id="Demo">
+        <div id="TitreDemo">Demo</div>
+        <div id="CorpsDemo">
+          <input class="inputCal" type="text" id="Valeur1" ><br>
+        <input class="inputCal" type="text" id="Valeur2"><br>
+        <input class="inputCal" type="text" id="Resultat"><br>
+
+        <button class="buttonCal"  onclick="Addition()"><i class="fa-solid fa-plus fa-lg"></i></button>
+        <button class="buttonCal" onclick="Soustraction()"><i class="fa-solid fa-minus fa-lg"></i></button>
+        <button class="buttonCal" onclick="Division()"><i class="fa-solid fa-divide fa-lg"></i></button>
+        <button class="buttonCal" onclick="Multiplication()"><i class="fa-solid fa-xmark fa-lg"></i></button>
+        </div>
+      </div>
+
+      <div id="CodeSource">
+        <div id="TitreCodeSource">Code source</div>
+        <div id="CorpsCodeSource"><p><textarea readonly rows="31" cols="120">function Addition ()
+                {
+                    let a = Number(document.getElementById("Valeur1").value);
+                    let b = Number(document.getElementById("Valeur2").value);
+                    let c = a + b;
+                    document.getElementById("Resultat").value = c;
+                }
+
+            function Soustraction ()
+                {
+                    let a = Number(document.getElementById("Valeur1").value);
+                    let b = Number(document.getElementById("Valeur2").value);
+                    let c = a - b;
+                    document.getElementById("Resultat").value = c;
+                }
+
+            function Division ()
+                {
+                    let a = Number(document.getElementById("Valeur1").value);
+                    let b = Number(document.getElementById("Valeur2").value);
+                    let c = a / b;
+                    document.getElementById("Resultat").value = c;
+                    if( b == 0)
+                        c == Infinity;
+                }
+
+            function Multiplication ()
+                {
+                    let a = Number(document.getElementById("Valeur1").value);
+                    let b = Number(document.getElementById("Valeur2").value);
+                    let c = a * b;
+                    document.getElementById("Resultat").value = c;
+                }</textarea></p></div>  
+      </div>
+
+      <script>
+            function Addition ()
+                {
+                    let a = Number(document.getElementById("Valeur1").value);
+                    let b = Number(document.getElementById("Valeur2").value);
+                    let c = a + b;
+                    document.getElementById("Resultat").value = c;
+                }
+
+            function Soustraction ()
+                {
+                    let a = Number(document.getElementById("Valeur1").value);
+                    let b = Number(document.getElementById("Valeur2").value);
+                    let c = a - b;
+                    document.getElementById("Resultat").value = c;
+                }
+
+            function Division ()
+                {
+                    let a = Number(document.getElementById("Valeur1").value);
+                    let b = Number(document.getElementById("Valeur2").value);
+                    let c = a / b;
+                    document.getElementById("Resultat").value = c;
+                    if( b == 0)
+                        c == Infinity;
+                }
+
+            function Multiplication ()
+                {
+                    let a = Number(document.getElementById("Valeur1").value);
+                    let b = Number(document.getElementById("Valeur2").value);
+                    let c = a * b;
+                    document.getElementById("Resultat").value = c;
+                }
+        </script>
+
+    </body>

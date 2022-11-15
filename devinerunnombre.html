@@ -1,0 +1,188 @@
+<!Doctype html>
+	<html>
+		
+		<head>
+			<title>Titre de l'exercice</title>
+			<meta charset= utf-8>
+			<link rel="stylesheet" href="devinerunnombre.css">
+			
+
+		</head>
+
+		<body>
+
+
+			<nav>
+    <ul>
+        <li><a  href="permuterdeuxnombres.html">Les variables</a></li>
+        <li><a href="datevalide.html">Les conditions</a></li>
+        <li class="menu"><a href="#">Les boucles </a>
+          <ul class="sous-menu">
+            <li><a href="tabledemultiplication.html">La boucle for</a></li>
+            <li><a href="devinerunnombre.html">La boucle while</a></li>
+            <li><a href="losangeenetoiles.html">Les boucles imbriquées </a></li>
+
+          </ul>
+        </li>
+        <li><a href="Calculatrice.html">Les fonctions</a></li>
+        <li class="menu"><a href="#">Les chaines </a>
+          <ul class="sous-menu">
+            <li><a href="rechercheetsuppressiondansunechaine.html">Recherche et Supression </a></li>
+            <li><a href="nombredevoyelles.html">Compter le nombre des voyelles </a></li>
+            
+          </ul>
+        </li>
+        <li class="menu"><a href="#">Les tableaux </a>
+            <ul class="sous-menu">
+              <li><a href="tritableau.html">Tri d'un tableau</a></li>
+              <li><a href="recherchedansuntableau.html">Recherche d'un tableau</a></li>
+              
+            </ul>
+          </li>
+        
+        
+      </ul>
+    </nav>
+
+    <h1>Deviner le nombre</h1>
+      <div id="Enonce">
+        <div id="TitreEnonce">Enoncé</div>
+        <div id="ParagrapheEnonce"><p>L'utilisateur doit choisir un nombre entre 1 et 50 que le programme a choisi aléatoirement. Quand 
+        l'utilisateur entre une valeur, on lui affiche le nombre de tentatives restantes, ainsi qu'un message indiquant si la valeur est correcte ou pas.</p></div>
+      </div>
+<div id="Demo">
+        <div id="TitreDemo">Demo</div>
+        <div id="CorpsDemo">
+          <p>Tentatives restantes : <span id="tentatives">10</span></p>
+          <p>Deviner un nombre entre 1 et 50</p>
+          <input id="inputDev" type="text" placeholder="Saisie un nombre">
+          <button class="buttonDev" onclick=onSubmit()>Envoyer</button>
+          <p id="message"></p>
+        </div>
+      </div>
+
+      <div id="CodeSource">
+        <div id="TitreCodeSource">Code source</div>
+        <div id="CorpsCodeSource"><p><textarea readonly rows="57" cols="120">var answer;
+ var Tentatives;
+ var attempsOutput;
+ var winMessage;
+ var itIsSmall;
+ var itIsBigger;
+ // Seize 
+ var lostMessage = "Vous avez perdu :(";
+ var tentatives = document.getElementById("tentatives");
+ var message = document.getElementById("message")
+ 
+ answer = Math.floor(Math.random() * 51);
+ Tentatives =10;
+ function writeattempts () {
+     tentatives.innerHTML = Tentatives;
+ }
+ 
+ 
+ function onSubmit (){
+     --Tentatives;
+     attempsOutput = 10 - Tentatives;
+ 
+     if(Tentatives > 0){
+         var userInput = document.getElementById("inputDev").value;
+ 
+         if(isNaN(userInput) || userInput== undefined){
+             alert("Entrez un nombre")
+         } else {
+             isCorrect(userInput)
+         }
+         userInput.value = ""
+     } else {
+         message.innerHTML = lostMessage
+         tentatives.innerHTML = 0;
+     }
+ }
+ 
+ function isCorrect(userInput) {
+ 
+      itIsSmall = "Le numéro inconnu est plus petit que votre essai" + " " + userInput + " , Réssayez encore!"
+      itIsBigger = "Le numéro inconnu est plus grand que votre essai" + " " + userInput + " , Réssayez encore!"
+         if (userInput == answer){
+             if(Tentatives >= 8){
+                 winMessage = 'Bravo!'
+             } else {
+                 winMessage = "Bravo! Vous avez gagné!! ";
+             }
+             message.innerHTML = winMessage
+ 
+         } else if (userInput > answer){
+             message.innerHTML = itIsSmall
+             writeattempts() 
+ 
+         } else if (userInput < answer){
+             message.innerHTML = itIsBigger
+             writeattempts() 
+ 
+         } </textarea></p></div>  
+      </div>
+
+      <script>
+ var answer;
+ var Tentatives;
+ var attempsOutput;
+ var winMessage;
+ var itIsSmall;
+ var itIsBigger;
+ // Seize 
+ var lostMessage = "Vous avez perdu :(";
+ var tentatives = document.getElementById("tentatives");
+ var message = document.getElementById("message")
+ 
+ answer = Math.floor(Math.random() * 51);
+ Tentatives =10;
+ function writeattempts () {
+     tentatives.innerHTML = Tentatives;
+ }
+ 
+ 
+ function onSubmit (){
+     --Tentatives;
+     attempsOutput = 10 - Tentatives;
+ 
+     if(Tentatives > 0){
+         var userInput = document.getElementById("inputDev").value;
+ 
+         if(isNaN(userInput) || userInput== undefined){
+             alert("Entrez un nombre")
+         } else {
+             isCorrect(userInput)
+         }
+         userInput.value = ""
+     } else {
+         message.innerHTML = lostMessage
+         tentatives.innerHTML = 0;
+     }
+ }
+ 
+ function isCorrect(userInput) {
+ 
+      itIsSmall = "Le numéro inconnu est plus petit que votre essai" + " " + userInput + " , Réssayez encore!"
+      itIsBigger = "Le numéro inconnu est plus grand que votre essai" + " " + userInput + " , Réssayez encore!"
+         if (userInput == answer){
+             if(Tentatives >= 8){
+                 winMessage = 'Bravo!'
+             } else {
+                 winMessage = "Bravo! Vous avez gagné!! ";
+             }
+             message.innerHTML = winMessage
+ 
+         } else if (userInput > answer){
+             message.innerHTML = itIsSmall
+             writeattempts() 
+ 
+         } else if (userInput < answer){
+             message.innerHTML = itIsBigger
+             writeattempts() 
+ 
+         } 
+ 
+ }</script>
+
+    </body>

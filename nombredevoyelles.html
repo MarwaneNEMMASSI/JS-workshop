@@ -1,0 +1,125 @@
+<!Doctype html>
+	<html>
+		
+		<head>
+			<title>Titre de l'exercice</title>
+			<meta charset= utf-8>
+			<link rel="stylesheet" href="nombredevoyelles.css">
+			
+
+		</head>
+
+		<body>
+
+
+			<nav>
+    <ul>
+        <li><a  href="permuterdeuxnombres.html">Les variables</a></li>
+        <li><a href="datevalide.html">Les conditions</a></li>
+        <li class="menu"><a href="#">Les boucles </a>
+          <ul class="sous-menu">
+            <li><a href="tabledemultiplication.html">La boucle for</a></li>
+            <li><a href="devinerunnombre.html">La boucle while</a></li>
+            <li><a href="losangeenetoiles.html">Les boucles imbriquées </a></li>
+
+          </ul>
+        </li>
+        <li><a href="Calculatrice.html">Les fonctions</a></li>
+        <li class="menu"><a href="#">Les chaines </a>
+          <ul class="sous-menu">
+            <li><a href="rechercheetsuppressiondansunechaine.html">Recherche et Supression </a></li>
+            <li><a href="nombredevoyelles.html">Compter le nombre des voyelles </a></li>
+            
+          </ul>
+        </li>
+        <li class="menu"><a href="#">Les tableaux </a>
+            <ul class="sous-menu">
+              <li><a href="tritableau.html">Tri d'un tableau</a></li>
+              <li><a href="recherchedansuntableau.html">Recherche d'un tableau</a></li>
+              
+            </ul>
+          </li>
+        
+        
+      </ul>
+    </nav>
+
+    <h1>Nombre de voyelles</h1>
+      <div id="Enonce">
+        <div id="TitreEnonce">Enoncé</div>
+        <div id="ParagrapheEnonce"><p>Ecrire un script qui permet de calculer le nombre de voyelles dans une phrase saisie par l'utilisateur</p></div>
+      </div>
+<div id="Demo">
+        <div id="TitreDemo">Demo</div>
+        <div id="CorpsDemo">
+          
+          <input type="text" id="Phrase"> 
+          <button onclick="Research()" class="BouttonDateValide">Rechercher</button>
+          <div id="resultat"></div>
+
+        </div>
+      </div>
+
+      <div id="CodeSource">
+        <div id="TitreCodeSource">Code source</div>
+        <div id="CorpsCodeSource"><p><textarea readonly rows="24" cols="120">function Research ()
+    {
+      let chaine = document.getElementById("Phrase").value
+      let n = chaine.length
+      let a = 0
+      let i 
+
+      for(i = 0; i <= n - 1; i++)
+        {
+          if ( chaine[i] == 'a' || chaine[i] == 'e' || chaine[i] == 'i' || chaine[i] == 'u' || chaine[i] == 'o' || chaine[i] == 'y' 
+          || chaine[i] == 'A' || chaine[i] == 'E' || chaine[i] == 'I' || chaine[i] == 'U' || chaine[i] == 'O' || chaine[i] == 'Y')
+            {
+              a++;
+                    
+            }
+        }
+
+      if( a > 0)
+      {
+        document.getElementById("resultat").innerHTML += "La phrase contient " + a + " voyelles"                  
+      }
+      else
+      {
+        document.getElementById("resultat").innerHTML += "La phrase ne contient pas de voyelles"
+      }
+}</textarea></p></div>  
+      </div>
+
+      <script>
+
+  function Research ()
+    {
+      let chaine = document.getElementById("Phrase").value
+      let n = chaine.length
+      let a = 0
+      let i 
+
+      for(i = 0; i <= n - 1; i++)
+        {
+          if ( chaine[i] == 'a' || chaine[i] == 'e' || chaine[i] == 'i' || chaine[i] == 'u' || chaine[i] == 'o' || chaine[i] == 'y' 
+          || chaine[i] == 'A' || chaine[i] == 'E' || chaine[i] == 'I' || chaine[i] == 'U' || chaine[i] == 'O' || chaine[i] == 'Y')
+            {
+              a++;
+                    
+            }
+        }
+
+      if( a > 0)
+      {
+        document.getElementById("resultat").innerHTML += "La phrase contient " + a + " voyelles"                  
+      }
+      else
+      {
+        document.getElementById("resultat").innerHTML += "La phrase ne contient pas de voyelles"
+      }
+
+    }
+
+    </script>
+
+    </body>

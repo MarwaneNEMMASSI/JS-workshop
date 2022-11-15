@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Rechercher l'element</title>
+        <meta charset= UTF-8>
+    </head>
+    <body>
+        
+        <input type="text" id="tableau">
+        <input type="text" id="motarechercher">
+        <button id="rechercher">Rechercher</button>
+        <p id="affichage"></p>
+
+        <script>
+            document.getElementById("rechercher").addEventListener('click', function(){
+
+                let tableau = document.getElementById("tableau").value
+                let mots = tableau.split(", ")
+                let wordToFind = document.getElementById("motarechercher").value
+                let i 
+
+                for( i = 0; i <= mots.length - 1; i++)
+                    {
+                        if(wordToFind == mots[i] )
+                            {
+                                document.getElementById("affichage").innerHTML = "cet élèment éxiste dans la position" + i
+                            }
+                            else
+                            {
+                                document.getElementById("affichage").innerHTML = "cet élèment n'éxiste pas"
+                            }
+                    }
+
+            })
+            
+
+        </script>
+    </body>
+</html>

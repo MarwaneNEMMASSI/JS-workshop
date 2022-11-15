@@ -1,0 +1,92 @@
+<!Doctype html>
+	<html>
+		
+		<head>
+			<title>Titre de l'exercice</title>
+			<meta charset= utf-8>
+			<link rel="stylesheet" href="permuterdeuxnombres.css">
+			<script src="https://kit.fontawesome.com/d78c31e99a.js" crossorigin="anonymous"></script>
+
+		</head>
+
+		<body>
+
+
+			<nav>
+    <ul>
+        <li><a  href="permuterdeuxnombres.html">Les variables</a></li>
+        <li><a href="datevalide.html">Les conditions</a></li>
+        <li class="menu"><a href="#">Les boucles </a>
+          <ul class="sous-menu">
+            <li><a href="tabledemultiplication.html">La boucle for</a></li>
+            <li><a href="devinerunnombre.html">La boucle while</a></li>
+            <li><a href="losangeenetoiles.html">Les boucles imbriquées </a></li>
+
+          </ul>
+        </li>
+        <li><a href="Calculatrice.html">Les fonctions</a></li>
+        <li class="menu"><a href="#">Les chaines </a>
+          <ul class="sous-menu">
+            <li><a href="rechercheetsuppressiondansunechaine.html">Recherche et Supression </a></li>
+            <li><a href="nombredevoyelles.html">Compter le nombre des voyelles </a></li>
+            
+          </ul>
+        </li>
+        <li class="menu"><a href="#">Les tableaux </a>
+            <ul class="sous-menu">
+              <li><a href="tritableau.html">Tri d'un tableau</a></li>
+              <li><a href="recherchedansuntableau.html">Recherche d'un tableau</a></li>
+              
+            </ul>
+          </li>
+        
+        
+      </ul>
+    </nav>
+			<h1>Permutations de deux nombres</h1>
+			<div id="Enonce">
+				<div id="TitreEnonce">Enoncé</div>
+				<div id="ParagrapheEnonce"><p>Ecrire un script qui permute deux nombres ecris dans deux inputs</p></div>
+			</div>
+
+			<div id="Demo">
+				<div id="TitreDemo">Demo</div>
+				<div id="CorpsDemo">
+					<input class="inputPer" type="text" id="val1"/>
+					<button class="buttonPer" id="button">Permutez<i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+					<input class="inputPer" type="text" id="val2"/>
+				</div>
+			</div>
+
+			<div id="CodeSource">
+				<div id="TitreCodeSource">Code source</div>
+				<div id="CorpsCodeSource"><p><textarea readonly rows="10" cols="120">var monBouton = document.getElementById('button');
+monBouton.addEventListener('click', function(){
+  
+
+  var x, input1, input2;
+  input1 = document.getElementById("val1");
+  input2 = document.getElementById("val2")
+  x = input1.value;
+  input1.value = input2.value;
+  input2.value = x;
+})</pre></p></div>	
+			</div>
+
+			<script>
+var monBouton = document.getElementById('button');
+monBouton.addEventListener('click', function(){
+  
+
+  var x, input1, input2;
+  input1 = document.getElementById("val1");
+  input2 = document.getElementById("val2")
+  x = input1.value;
+  input1.value = input2.value;
+  input2.value = x;
+})
+</script>
+
+		</body>
+
+	</html>

@@ -1,0 +1,142 @@
+<!Doctype html>
+	<html>
+		
+		<head>
+			<title>Titre de l'exercice</title>
+			<meta charset= utf-8>
+			<link rel="stylesheet" href="rechercheetsuppressiondansunechaine.css">
+			
+
+		</head>
+
+		<body>
+
+
+			<nav>
+    <ul>
+        <li><a  href="permuterdeuxnombres.html">Les variables</a></li>
+        <li><a href="datevalide.html">Les conditions</a></li>
+        <li class="menu"><a href="#">Les boucles </a>
+          <ul class="sous-menu">
+            <li><a href="tabledemultiplication.html">La boucle for</a></li>
+            <li><a href="devinerunnombre.html">La boucle while</a></li>
+            <li><a href="#">Les boucles imbriquées </a></li>
+
+          </ul>
+        </li>
+        <li><a href="Calculatrice.html">Les fonctions</a></li>
+        <li class="menu"><a href="#">Les chaines </a>
+          <ul class="sous-menu">
+            <li><a href="rechercheetsuppressiondansunechaine.html">Recherche et Supression </a></li>
+            <li><a href="nombredevoyelles.html">Compter le nombre des voyelles </a></li>
+            
+          </ul>
+        </li>
+        <li class="menu"><a href="#">Les tableaux </a>
+            <ul class="sous-menu">
+              <li><a href="tritableau.html">Tri d'un tableau</a></li>
+              <li><a href="recherchedansuntableau.html">Recherche d'un tableau</a></li>
+              
+            </ul>
+          </li>
+        
+        
+      </ul>
+    </nav>
+
+    <h1>Recherche et suppression dans une chaine</h1>
+      <div id="Enonce">
+        <div id="TitreEnonce">Enoncé</div>
+        <div id="ParagrapheEnonce"><p>Ecrire un programme Javascript qui demande a l'utilisateur d'écrire une phrase dans une zone de texte et un mot dans une autre zone de texte. Le clique sur le bouton recherche affiche un message indiquant si le mot éxiste dans la phrase ou non. Le clique sur le boutton supprimer permet d'effacer toutes les occurences du mot dans la phrase (si le mot éxiste biensur)</p></div>
+      </div>
+<div id="Demo">
+        <div id="TitreDemo">Demo</div>
+        <div id="CorpsDemo">
+          
+          <div>
+      <p>Saisir une phrase</p>
+      <input type="text" id="phrase" style="width: 400px;">
+        </div>
+        <div>
+      <p>Saisir le mot à rechercher ou à supprimer</p>
+      <input type="text" id="word">
+      <div id="answ"></div>
+        </div>
+        <div>
+      <button id="search">Rechercher</button>
+      <button id="delete">Supprimer les occurences</button>
+        </div>
+        <div id="spot" style="width:70%; background-color: rgba(0, 0, 0, 0.148); padding: 10px; ";>
+        </div>
+
+        </div>
+
+
+        </div>
+      </div>
+
+      <div id="CodeSource">
+        <div id="TitreCodeSource">Code source</div>
+        <div id="CorpsCodeSource"><p><textarea readonly rows="28" cols="120">let search = document.getElementById("search");
+ let remove = document.getElementById("delete");
+ let phrase = document.getElementById("phrase");
+ let word = document.getElementById("word");
+ let spot = document.getElementById("spot");
+ let answ = document.getElementById("answ");
+ 
+ search.onclick = function(){
+    
+    spot.innerHTML = phrase.value;
+    if ( phrase.value.includes(word.value)) {
+       answ.innerHTML="This word is existing";
+       if(phrase.value === "" || word.value === ""){
+          answ.innerHTML="Empty value !!";
+       }
+ }else{
+    answ.innerHTML="Undefined";
+ }
+ }
+ remove.onclick = function(){
+    if ( phrase.value.includes(word.value)){
+       spot.innerHTML= phrase.value.replace(word.value, "");
+       if(phrase.value === "" || word.value === ""){
+          answ.innerHTML="Empty value !!";
+       }
+    }else{
+    answ.innerHTML="Undefined";
+    }
+ }</textarea></p></div>  
+      </div>
+
+      <script>let search = document.getElementById("search");
+ let remove = document.getElementById("delete");
+ let phrase = document.getElementById("phrase");
+ let word = document.getElementById("word");
+ let spot = document.getElementById("spot");
+ let answ = document.getElementById("answ");
+ 
+ search.onclick = function(){
+    
+    spot.innerHTML = phrase.value;
+    if ( phrase.value.includes(word.value)) {
+       answ.innerHTML="This word is existing";
+       if(phrase.value === "" || word.value === ""){
+          answ.innerHTML="Empty value !!";
+       }
+ }else{
+    answ.innerHTML="Undefined";
+ }
+ }
+ remove.onclick = function(){
+    if ( phrase.value.includes(word.value)){
+       spot.innerHTML= phrase.value.replace(word.value, "");
+       if(phrase.value === "" || word.value === ""){
+          answ.innerHTML="Empty value !!";
+       }
+    }else{
+    answ.innerHTML="Undefined";
+    }
+ }
+ </script>
+
+    </body>

@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+
+
+nav{
+    width: 100%;
+    height: 10vh;
+    margin: 0 auto;
+    background-color: lightblue;
+    top: 100px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-size: 23px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 16%;
+    text-align: center;
+    position: relative;
+   
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(16, 16, 16);
+    background-color:rgb(165, 237, 255); ;
+}
+
+.sous-menu{
+    display: none;
+    
+    background-color: rgb(243, 253, 255);
+    width: 100%;
+
+}
+nav > ul li:hover .sous-menu{
+    display: block;
+}
+.sous-menu li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.sous-menu a{
+    padding: 10px;
+    border-bottom: none;
+    font-size: 15px;
+    font-weight: normal;
+}
+.sous-menu a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+    
+}
+
+
+
+
+
+
+
+#Enonce, #Demo, #CodeSource
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 15px;
+
+}
+
+#Enonce
+{
+	margin-top: 65px;
+}
+
+#Demo
+{
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#TitreEnonce, #TitreDemo, #TitreCodeSource
+{
+	background-color: white;
+	width: 22vh;
+	height: 25px;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-size: 20px;
+    font-family: 'Poppins';
+    margin-left: 4vh;
+    border-radius: 4px;
+}
+#ParagrapheEnonce, #CorpsDemo, #CorpsCodeSource
+{
+	background-color: lightblue;
+	height: 30vh;
+	padding-left: 4vh;
+    padding-top: 3vh;
+    margin-right: 4vh;
+    margin-left: 4vh;
+    border-radius: 4px;
+}
+
+#ParagrapheEnonce, #CorpsDemo
+{
+    height: 15vh;
+}
+
+#CorpsDemo
+{
+	padding-top: 50px;
+}
+
+#CorpsCodeSource
+{
+	height: 30vh;
+    margin-bottom: 4vh;
+}
+
+p, pre
+{
+	display: inline;
+    font-family: 'Poppins';
+}
+h1
+{
+    font-family: 'Poppins';
+    text-align: center;
+    margin-top: 17vh;
+}
+textarea
+{
+    width: 80%;
+
+}
+@media screen and (max-width:400px ){
+
+  
+    .Codesource{
+        font-size: 1px;
+    }
+    li{
+        font-size: 10px !important;
+
+    }
+
+
+
+    
+
+}
+@media screen and (max-width:540px ){
+    body{
+        font-size: 15px;
+    }
+    .Codesource{
+        font-size: 20px;
+    }
+    li{
+        font-size: 10px !important;
+
+    }
+    h1{
+        font-size: 15px;
+
+    }
+}
+@media screen and (max-width:830px ){
+
+
+    li{
+        font-size: 15px;
+
+    }
+
+}
+@media screen and (max-width:360px ){
+
+    li{
+        font-size: 10px !important;
+
+    }
+
+
+}

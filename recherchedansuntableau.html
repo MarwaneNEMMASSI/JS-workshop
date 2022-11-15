@@ -1,0 +1,191 @@
+<!Doctype html>
+	<html>
+		
+		<head>
+			<title>Titre de l'exercice</title>
+			<meta charset= utf-8>
+			<link rel="stylesheet" href="recherchedansuntableau.css">
+			
+
+		</head>
+
+		<body>
+
+
+			<nav>
+    <ul>
+        <li><a  href="permuterdeuxnombres.html">Les variables</a></li>
+        <li><a href="Calculatrice.html">Les conditions</a></li>
+        <li class="menu"><a href="#">Les boucles </a>
+          <ul class="sous-menu">
+            <li><a href="tabledemultiplication.html">La boucle for</a></li>
+            <li><a href="devinerunnombre.html">La boucle while</a></li>
+            <li><a href="losangeenetoiles.html">Les boucles imbriquées </a></li>
+
+          </ul>
+        </li>
+        <li><a href="Calculatrice.html">Les fonctions</a></li>
+        <li class="menu"><a href="#">Les chaines </a>
+          <ul class="sous-menu">
+            <li><a href="rechercheetsuppressiondansunechaine.html">Recherche et Supression </a></li>
+            <li><a href="nombredevoyelles.html">Compter le nombre des voyelles </a></li>
+            
+          </ul>
+        </li>
+        <li class="menu"><a href="#">Les tableaux </a>
+            <ul class="sous-menu">
+              <li><a href="tritableau.html"target="_blank">Tri d'un tableau</a></li>
+              <li><a href="recherchedansuntableau.html">Recherche d'un tableau</a></li>
+              
+            </ul>
+          </li>
+        
+        
+      </ul>
+    </nav>
+
+    <h1>Recherche dans un tableau</h1>
+      <div id="Enonce">
+        <div id="TitreEnonce">Enoncé</div>
+        <div id="ParagrapheEnonce"><p>Ecrire un programme javascript qui permet de rechercher une valeur dans un tableau d'entier. </br>L'utilisateur doit suivre les étapes suivantes : </br> 1- Saisir la taille du tableau. <br> 2- Remplir le tableau par des entiers <br> 3- Introduire la valeur a rechercher <br> 4- Cliquer sur le bouton rechercher. <br> Le programme affiche ensuite un message si la valeur a rechercher éxiste ou non dans le tableau. </p></div>
+      </div>
+<div id="Demo">
+        <div id="TitreDemo">Demo</div>
+        <div id="CorpsDemo">
+            <input type="text" id="tailletableau">
+            <input type="text" id="entier_a_rechercher">
+            <div id="Result"></div>
+            <button onclick="Tailletableau()">Valider</button>
+            <button onclick="Research()">Rechercher</button>
+            <div class="output"></div>
+        </div>
+      </div>
+
+      <div id="CodeSource">
+        <div id="TitreCodeSource">Code source</div>
+        <div id="CorpsCodeSource"><p><textarea readonly rows="59" cols="120">let tableau = [];
+                let i = 0
+                let output = document.querySelector(".output")
+
+                function Tailletableau ()
+                    {
+                        taille = document.getElementById("tailletableau").value;
+                        output.innerHTML = ``
+
+
+
+                    for(i=0 ; i < taille; i++)
+                        {
+                            output.innerHTML += `<input id="index${i}">`
+
+                            
+                        }
+                    }  
+                function getvalu ()
+                    {
+                    for(i = 0; i < taille; i++)
+                        {
+                            tableau.push(Number(document.getElementById(`index${i}`).value))
+
+                        }
+                        console.log(tableau)
+                    }
+
+                    let n = tableau.length
+                    i = 0;
+                    let a = document.getElementById("entier_a_rechercher").value
+
+                function Research()
+                {
+
+                    getvalu()
+                    let n = tableau.length
+                    i = 0;
+                    let a = document.getElementById("entier_a_rechercher").value
+                    let b = 0;
+
+                    for(i = 0; i <= n - 1; i++)
+                        {
+                            if( a == tableau[i] )
+                            {
+                                b++
+                            }
+                        }
+
+                    if (b > 0)
+                    {
+                        console.log("Le chiffre existe")
+                        document.getElementById("Result").innerHTML += "Le chiffre éxiste dans le tableau"
+                    }
+                    else
+                    {
+                        console.log("Le chiffre n'existe pas dans le")
+                        document.getElementById("Result").innerHTML += 'Le chiffre n\'éxiste pas dans le tableau'
+                    }
+                }</textarea></p></div>  
+      </div>
+
+      <script>
+                let tableau = [];
+                let i = 0
+                let output = document.querySelector(".output")
+
+                function Tailletableau ()
+                    {
+                        taille = document.getElementById("tailletableau").value;
+                        output.innerHTML = ``
+
+
+
+                    for(i=0 ; i < taille; i++)
+                        {
+                            output.innerHTML += `<input id="index${i}">`
+
+                            
+                        }
+                    }  
+                function getvalu ()
+                    {
+                    for(i = 0; i < taille; i++)
+                        {
+                            tableau.push(Number(document.getElementById(`index${i}`).value))
+
+                        }
+                        console.log(tableau)
+                    }
+
+                    let n = tableau.length
+                    i = 0;
+                    let a = document.getElementById("entier_a_rechercher").value
+
+                function Research()
+                {
+
+                    getvalu()
+                    let n = tableau.length
+                    i = 0;
+                    let a = document.getElementById("entier_a_rechercher").value
+                    let b = 0;
+
+                    for(i = 0; i <= n - 1; i++)
+                        {
+                            if( a == tableau[i] )
+                            {
+                                b++
+                            }
+                        }
+
+                    if (b > 0)
+                    {
+                        console.log("Le chiffre existe")
+                        document.getElementById("Result").innerHTML += "Le chiffre éxiste dans le tableau"
+                    }
+                    else
+                    {
+                        console.log("Le chiffre n'existe pas dans le")
+                        document.getElementById("Result").innerHTML += 'Le chiffre n\'éxiste pas dans le tableau'
+                    }
+                }
+                </script>
+
+    </body>

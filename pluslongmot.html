@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Plus long mot</title>
+        <meta charset= utf-8>
+    </head>
+    <body>
+
+        <input type="text" id="phrase">
+        <button id="rechercher">Recherche du plus long mot</button>
+
+        <script>
+            document.getElementById("rechercher").addEventListener('click', function(){
+                
+                let phrase = document.getElementById("phrase").value
+                let tableau = phrase.split(" ")
+
+            alert(tableau)
+            })
+            
+        </script>
+    </body>
+</html>
